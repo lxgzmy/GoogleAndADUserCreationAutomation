@@ -6,5 +6,6 @@ execute the ./createUserFromGam.sh <firstname> <lastname> will create the user i
     4. still need to mannuly run the powershell script in on premis domain at office in domain controller.
 
 requirement for this script:
-    1. need to install and configure GAM Github:https://github.com/jay0lee/GAM
-    2. 
+    1. need to install and configure GAM Github: https://github.com/jay0lee/GAM
+    2. need to enable the systems manager in aws, allow target server to install ssm agent and have corresponding role attached to remotely run the script
+    3. run the shell script with corresponding profile and region for aws environments
