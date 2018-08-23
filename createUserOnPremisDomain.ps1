@@ -1,7 +1,7 @@
 
 
 param(
-    [string]$displayName = $(Read-Host "Input name please")
+    [string]$displayName
 
 )
 

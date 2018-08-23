@@ -16,6 +16,10 @@ echo $lowercase
 /Users/jason.liu/bin/gam/gam update group jira-users@cashrewards.com add member user $email
 /Users/jason.liu/bin/gam/gam update group slack-users@cashrewards.com add member user $email
 
+/Users/jason.liu/bin/gam/gam update user $email \
+    SSO.role multivalued arn:aws:iam::752830773963:role/dev-saml-Developer,arn:aws:iam::752830773963:saml-provider/Google \
+    SSO.role multivalued arn:aws:iam::356724879491:role/prod-saml-Developer,arn:aws:iam::356724879491:saml-provider/Google 
+
 replaceText="replaceText"
 
 #echo $powerShell 
@@ -28,4 +32,4 @@ aws ssm send-command --document-name "AWS-RunPowerShellScript" --document-versio
 
 sed -i -e "s/${displayName}/${replaceText}/g" powerShellTemplate.json
 
-./localDomain.sh $displayName
+#./localDomain.sh $displayName
