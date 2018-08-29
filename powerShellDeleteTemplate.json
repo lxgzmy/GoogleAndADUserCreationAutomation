@@ -1,0 +1,14 @@
+{
+    "workingDirectory": [
+        ""
+    ],
+    "executionTimeout": [
+        "3600"
+    ],
+    "commands": [
+        "$displayName = \"replaceText\"",
+        "$firstName = $displayName.Split(\" \")[0]",
+        "$lastName=$displayName.Split(\" \")[1]",
+        "Remove-ADUser -Identity ($firstName +\".\"+ $lastName) `"
+    ]
+}

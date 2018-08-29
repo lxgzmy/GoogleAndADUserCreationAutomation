@@ -2,7 +2,6 @@
 
 param(
     [string]$displayName
-
 )
 
 $firstName = $displayName.Split(' ')[0]
