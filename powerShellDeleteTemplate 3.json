@@ -6,7 +6,7 @@
         "3600"
     ],
     "commands": [
-        "$displayName = \"Yukesh Bhattarai\"",
+        "$displayName = \"replaceText\"",
         "$firstName = $displayName.Split(\" \")[0]",
         "$lastName=$displayName.Split(\" \")[1]",
         "Remove-ADUser -Identity ($firstName +\".\"+ $lastName) `"

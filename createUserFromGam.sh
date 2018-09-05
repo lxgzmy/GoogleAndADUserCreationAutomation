@@ -20,6 +20,8 @@ echo $lowercase
     SSO.role multivalued arn:aws:iam::752830773963:role/dev-saml-Developer,arn:aws:iam::752830773963:saml-provider/Google \
     SSO.role multivalued arn:aws:iam::356724879491:role/prod-saml-Developer,arn:aws:iam::356724879491:saml-provider/Google 
 
+/Users/jason.liu/bin/gam/gam info user $email
+
 replaceText="replaceText"
 
 #echo $powerShell 
