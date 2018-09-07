@@ -11,7 +11,7 @@ echo $email
 echo $displayName
 echo $lowercase
 
-/Users/jason.liu/bin/gam/gam delete user $email
+#/Users/jason.liu/bin/gam/gam delete user $email
 
 replaceText="replaceText"
 
@@ -24,4 +24,4 @@ aws ssm send-command --document-name "AWS-RunPowerShellScript" --document-versio
 
 sed -i -e "s/${displayName}/${replaceText}/g" powerShellDeleteTemplate.json
 
-ssh -t cr-syd-dc1 ".\DeleteUser.ps1 -displayName '${displayName}'"
+#ssh -t cr-syd-dc1 ".\DeleteUser.ps1 -displayName '${displayName}'"
