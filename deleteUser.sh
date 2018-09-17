@@ -22,6 +22,6 @@ replaceText="replaceText"
 
 # aws ssm send-command --document-name "AWS-RunPowerShellScript" --document-version "\$DEFAULT" --targets "Key=instanceids,Values=i-0007a190dbe1ad5a7" --parameters file://powerShellDeleteTemplate.json  --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region ap-southeast-2 --profile crtool
 
-sed -i -e "s/${displayName}/${replaceText}/g" powerShellDeleteTemplate.json
+#sed -i -e "s/${displayName}/${replaceText}/g" powerShellDeleteTemplate.json
 
 ssh -t cr-syd-dc1 ".\DeleteUser.ps1 -displayName '${displayName}'"

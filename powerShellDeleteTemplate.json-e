@@ -9,6 +9,6 @@
         "$displayName = \"replaceText\"",
         "$firstName = $displayName.Split(\" \")[0]",
         "$lastName=$displayName.Split(\" \")[1]",
-        "Remove-ADUser -Identity ($firstName +\".\"+ $lastName) `"
+        "Remove-ADUser -Identity ($firstName.ToLower() +\".\"+ $lastName.ToLower())"
     ]
 }
